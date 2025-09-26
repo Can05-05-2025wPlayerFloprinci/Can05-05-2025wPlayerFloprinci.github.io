@@ -666,7 +666,7 @@ function getParameterByName(name) {
 async function getURLwithToken() {
     let token = sessionStorage.getItem('token')
     if (!token) {
-        const url = 'https://chromecast.cvattv.com.ar/live/c7eds/La_Nacion/SA_Live_dash_enc/La_Nacion.m3u8';
+        const url = 'https://cdn.cvattv.com.ar/live/c7eds/La_Nacion/SA_Live_dash_enc/La_Nacion.m3u8';
         let response = await fetch(url, { signal: AbortSignal.timeout(5000) });
         if (response.redirected) {
             const regex = /(https:\/\/.+?)(?=\/live)/;
@@ -683,14 +683,15 @@ async function getURLwithToken() {
 
 // Dominios
 let mt = [
-    "chromecast",
-    "cdn",
-    "edge-live01-cte",
-    "edge-live02-mun",
-    "edge-mix02-cte",
-    "edge-mix04-coe",
-    "edge-mix05-coe",
-    "edge2-ccast-sl",
+   
+  "edge01-cde-py",
+"edge02-cde-py",
+"edge03-cde-py",
+"edge04-cde-py",
+"edge01-fdo-py",
+"edge02-fdo-py",
+"edge03-fdo-py",
+"edge04-fdo-py",
 
     //No funciona
     // "edge1-ccast-sl",
