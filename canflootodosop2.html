@@ -666,7 +666,7 @@ function getParameterByName(name) {
 async function getURLwithToken() {
     let token = sessionStorage.getItem('token')
     if (!token) {
-        const url = 'https://cdn.cvattv.com.ar/live/c7eds/La_Nacion/SA_Live_dash_enc/La_Nacion.m3u8';
+        const url = 'https://edge01-cde-py.cvattv.com.ar/live/c7eds/La_Nacion/SA_Live_dash_enc/La_Nacion.m3u8';
         let response = await fetch(url, { signal: AbortSignal.timeout(5000) });
         if (response.redirected) {
             const regex = /(https:\/\/.+?)(?=\/live)/;
@@ -693,46 +693,7 @@ let mt = [
 "edge03-fdo-py",
 "edge04-fdo-py",
 
-    //No funciona
-    // "edge1-ccast-sl",
-    // "edge-live01-mun",
-    // "edge-live11-hr",
-    // "edge-live12-hr",
-    // "edge-live13-hr",
-    // "edge-live14-hr",
-    // "edge-live15-hr",
-    // "edge-live16-hr",
-    // "edge-live17-hr",
-    // "edge-live31-hr",
-    // "edge-live32-hr",
-    // "edge-live34-hr",
-    // "edge-live11-sl",
-    // "edge-live12-sl",
-    // "edge-live13-sl",
-    // "edge-live15-sl",
-    // "edge-live17-sl",
-    // "edge-live31-sl",
-    // "edge-vod02-sl",
-    // "edge-vod04-sl",
-    // "edge-vod06-sl",
-    // "edge9-sl",
-    // "edge10-sl",
-    // "edge-live14-sl",
-    // "edge-vod01-hr",
-    // "edge-vod03-hr",
-    // "edge-vod04-hr",
-    // "edge6-ccast-sl",
-    // "edge-live01-cen",
-    // "edge-live03-cen",
-    // "edge-vod01-cen",
-    // "edge-live01-coe",
-    // "edge-mix01-coe",
-    // "edge-mix02-coe",
-    // "edge-mix03-coe",
-    // "edge-mix01-ird",
-    // "edge-mix02-ird",
-    // "edge-mix01-mus",
-    // "edge-mix03-mus",
+  
 ]
 
 // Comprueba dominios y lo asigna
